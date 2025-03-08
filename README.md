@@ -1,36 +1,23 @@
 # PDF Unlocker
 
-This script unlocks a password-protected PDF file by adding a password. It uses the `pikepdf` library to open the PDF and `tqdm` to display a progress bar while iterating through the passwords.
+This script attempts to unlock a password-protected PDF file using a user-provided password. It uses the `pikepdf` library to open the PDF and verifies the file's existence before attempting to unlock it.
 
 ## Requirements
 
 Ensure you have the following Python packages installed before running the script:
 
 ```sh
-pip install pikepdf tqdm
+pip install pikepdf
 ```
 
 ## How It Works
 
-1. The script takes a PDF file path and a string containing a password(provided in your email).
-2. It splits the string into individual passwords and tries to unlock the PDF.
-3. If a correct password is found, the unlocked PDF is saved to `C:\Users\downloads\unlocked_file.pdf`.
-4. If none of the passwords work, the script outputs "No password worked".
+1. The script prompts the user to enter the path of the locked PDF file and the password.
+2. It checks whether the specified file exists before proceeding.
+3. If the password is correct, the unlocked PDF is saved in the same directory with the prefix `unlocked_` added to the original filename.
+4. If the password is incorrect or the file is corrupted, the script provides an appropriate error message.
 
 ## Usage
-
-Modify the following variables in the script before running:
-
-- `pdf_path`: Path to the locked PDF file.
-- `password_string`: A string containing potential passwords (one per line).
-
-Example:
-
-```python
-pdf_path = r"C:\Users\downloads\file_to_unlocked.pdf"
-password_string = """add_your_password_here"""
-try_unlock_pdf(pdf_path, password_string)
-```
 
 Run the script using Python:
 
@@ -38,12 +25,35 @@ Run the script using Python:
 python script.py
 ```
 
+When prompted, enter:
+- The path to the locked PDF file
+- The password for the file
+
+Example:
+
+```sh
+Enter the path to your PDF file: C:\Users\Downloads\locked_file.pdf
+Enter the password: mysecurepassword
+```
+
+If the password is correct, the unlocked file will be saved as:
+
+```
+C:\Users\Downloads\unlocked_locked_file.pdf
+```
+
+## Error Handling
+- If the file does not exist, the script prints an error message.
+- If the password is incorrect, the script notifies the user.
+- If the PDF is corrupted or invalid, an appropriate error message is displayed.
+
 ## Notes
 
 - Ensure you have permission to unlock the PDF file.
-- The script does not attempt brute force attacks but works with provided passwords
-- Modify the save path as needed to suit your system.
+- This script does **not** attempt brute force attacks but relies on a single provided password.
+- Modify the save path logic as needed to suit your system.
 
 ## Disclaimer
 
 This script is intended for ethical use only. Do not use it to unlock files without proper authorization.
+
