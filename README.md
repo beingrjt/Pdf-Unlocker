@@ -1,6 +1,6 @@
 # PDF Unlocker
 
-This script attempts to unlock a password-protected PDF file by trying a list of passwords. It uses the `pikepdf` library to open the PDF and `tqdm` to display a progress bar while iterating through the passwords.
+This script unlocks a password-protected PDF file by adding a password. It uses the `pikepdf` library to open the PDF and `tqdm` to display a progress bar while iterating through the passwords.
 
 ## Requirements
 
