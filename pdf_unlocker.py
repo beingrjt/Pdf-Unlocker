@@ -20,5 +20,5 @@ def try_unlock_pdf(pdf_path, password_string):
 # Usage 
 pdf_path = r"C:\Users\downloads\file_to_unlocked.pdf"
 # Password list as a string with just the working password
-password_string = """add_your_password_here"""
+password_string = """add_your_password_here""" #add your password here
 try_unlock_pdf(pdf_path, password_string)
