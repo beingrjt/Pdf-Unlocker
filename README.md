@@ -41,7 +41,7 @@ python script.py
 ## Notes
 
 - Ensure you have permission to unlock the PDF file.
-- The script does not attempt brute force attacks but works with a provided list of passwords.
+- The script does not attempt brute force attacks but works with provided passwords
 - Modify the save path as needed to suit your system.
 
 ## Disclaimer
