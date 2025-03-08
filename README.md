@@ -12,8 +12,8 @@ pip install pikepdf tqdm
 
 ## How It Works
 
-1. The script takes a PDF file path and a string containing potential passwords.
-2. It splits the string into individual passwords and tries each one to unlock the PDF.
+1. The script takes a PDF file path and a string containing a password(provided in your email).
+2. It splits the string into individual passwords and tries to unlock the PDF.
 3. If a correct password is found, the unlocked PDF is saved to `C:\Users\downloads\unlocked_file.pdf`.
 4. If none of the passwords work, the script outputs "No password worked".
 
